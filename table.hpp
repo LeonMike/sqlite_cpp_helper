@@ -24,7 +24,7 @@
 
 using namespace std;
 
-namespace sqlite_helper {
+namespace sqlite_cpp_helper {
 
   struct COLUMN_DESC {
     string type;
