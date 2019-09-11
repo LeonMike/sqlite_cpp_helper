@@ -77,6 +77,7 @@ namespace sqlite_cpp_helper {
   }
   
   Table::Table(sqlite3 *db): Db(db) {}
+  Table::Table(Table &base): Db(base.Db) {}
   Table::~Table() { sqlite3_close(Db); columns.clear(); }
 
   void Table::create_column(string name, string type) {

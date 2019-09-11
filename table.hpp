@@ -66,6 +66,7 @@ namespace sqlite_cpp_helper {
     string sqlSave();
   public:
     Table(sqlite3 *db);
+    Table(Table &);
     ~Table();
 
     void   Create();

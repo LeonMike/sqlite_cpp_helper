@@ -27,10 +27,16 @@ namespace sqlite_cpp_helper {
     sqlite3_close(Db);
   }
 
-  Table &Database::New_Table(string name) {
+  /*Table &Database::New_Table(string name) {
     tables[name] = new Table(Db);
     tables[name]->name = name;
     return *tables[name];
+    }*/
+
+  Table *Database::New_Table(string name) {
+    tables[name] = new Table(Db);
+    tables[name]->name = name;
+    return tables[name];
   }
 
   Table & Database::operator [](string name) {

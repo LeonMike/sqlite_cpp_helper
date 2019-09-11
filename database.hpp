@@ -39,7 +39,8 @@ namespace sqlite_cpp_helper {
 
     DB_TABLES_MAP tables;
     
-    Table &New_Table(string name);
+    //Table &New_Table(string name);
+    Table *New_Table(string name);
 
     Table &operator [](string name);
     
